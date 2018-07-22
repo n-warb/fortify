@@ -1,0 +1,22 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "forkify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n-warb/fortify.git"
+  },
+  "author": "Nigel Warburton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n-warb/fortify/issues"
+  },
+  "homepage": "https://github.com/n-warb/fortify#readme",
+  "devDependencies": {
+    "webpack": "^4.16.1"
+  }
+}
