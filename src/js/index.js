@@ -19,9 +19,7 @@ import * as likesView from './views/likesView'
 //shopping list object
 //liked recipes
 
-const state = {};
 
-window.state = state;
 
 const controlSearch = async () => {
     //1) Get query from the view
@@ -127,9 +125,6 @@ elements.shopping.addEventListener('click', e => {
     }
 })
 
-//testing
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes())
 
 
 //LIKE controller
@@ -161,6 +156,14 @@ const controlLike = () => {
 
     likesView.toggleLikeMenu(state.likes.getNumLikes())
 }
+
+window.addEventListener('load', () => {
+
+    state.likes = new Likes();
+    state.likes.readStorage();
+    likesView.toggleLikeMenu(state.likes.getNumLikes())
+    state.likes.likes.forEach(like => likesView.renderLike(like))
+})
 
 
 
