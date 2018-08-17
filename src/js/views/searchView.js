@@ -6,7 +6,7 @@ export const clearInput = () => {
     elements.searchInput.value = '';
 }
 
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
     if (title.length > limit) {
         title.split(' ').reduce((acc, curr) => {
@@ -23,6 +23,16 @@ const limitRecipeTitle = (title, limit = 17) => {
 export const clearResults = () => {
     elements.searchResList.innerHTML = '';
     elements.searchResPages.innerHTML = '';
+}
+
+export const highlightSelected = id => {
+
+    const resultArr = Array.from(document.querySelectorAll('.results__link'));
+    resultArr.forEach(el => {
+        el.classList.remove('results__link--active')
+    })
+
+    document.querySelector(`.results__link[href="#${id}"]`).classList.add('results__link--active')
 }
 
 const renderRecipe = recipe => {

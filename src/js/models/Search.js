@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import key from '../config'
+import {key} from '../config'
 
 export default class Search {
     constructor(query) {
